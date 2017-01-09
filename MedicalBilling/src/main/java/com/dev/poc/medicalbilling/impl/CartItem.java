@@ -64,7 +64,7 @@ public class CartItem implements IShoppingCartElement {
 
 	@Override
 	public void accept(IShoppingCartVisitor visitor) {
-		// TODO Auto-generated method stub
+		visitor.visitCartItem(this);
 		
 	}
 	

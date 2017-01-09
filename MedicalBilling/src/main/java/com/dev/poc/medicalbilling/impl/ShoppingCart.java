@@ -13,10 +13,13 @@ public class ShoppingCart implements IShoppingCartElement {
 	
 	private List<IShoppingCartElement> cartItemList = new ArrayList<IShoppingCartElement>();
 	
+	public List<IShoppingCartElement> getCartItemList() {
+		return cartItemList;
+	}
+
 	public double getTotalBill() {
 		return totalBill;
 	}
-
 
 	public void setTotalBill(double totalBill) {
 		this.totalBill = totalBill;
@@ -30,7 +33,7 @@ public class ShoppingCart implements IShoppingCartElement {
 
 	@Override
 	public void accept(IShoppingCartVisitor visitor) {
-		// TODO Auto-generated method stub
+		visitor.visitShoppingCart(this);
 		
 	}
 

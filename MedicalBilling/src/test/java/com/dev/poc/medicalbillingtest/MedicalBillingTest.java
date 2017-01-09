@@ -4,6 +4,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.dev.poc.medicalbilling.GenerateMedicalBilling;
+import com.dev.poc.medicalbilling.impl.CartItem;
+import com.dev.poc.medicalbilling.impl.ShoppingCart;
+
 public class MedicalBillingTest {
 
 	@Test
