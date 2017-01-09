@@ -56,5 +56,13 @@ public class MedicalBillingTest {
 		shoppingCart.accept(new GenerateMedicalBilling());
 		assertEquals("Total Billing Cost",shoppingCart.getTotalBill(), 42.50, 0);
 	}
+	
+	@Test
+	public void whenTwoVaccineMediHealthServiceThanTotalCost() throws Exception {
+		ShoppingCart shoppingCart = new ShoppingCart();
+		shoppingCart.addCartItem(new CartItem(MediHealthEnum.VACCINE.name(), 15.00, 2));
+		shoppingCart.accept(new GenerateMedicalBilling());
+		assertEquals("Total Billing Cost",shoppingCart.getTotalBill(), 57.50, 0);
+	}
 
 }
